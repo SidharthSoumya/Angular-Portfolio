@@ -1,0 +1,20 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="social-links">
+        <a *ngFor="let link of socialLinks" 
+           [href]="link.url" 
+           target="_blank" 
+           rel="noopener noreferrer"
+           class="social-link"
+           [attr.aria-label]="link.label">
+          <mat-icon>{{ link.icon }}</mat-icon>
+        </a>
+      </div>
+      
+      <p class="copyright">
+        &copy; {{ currentYear }} Portfolio. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer> 

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+  <rect width="400" height="200" fill="#f0f0f0"/>
+  <rect x="50" y="50" width="80" height="60" fill="#007bff"/>
+  <rect x="150" y="50" width="80" height="60" fill="#007bff"/>
+  <rect x="250" y="50" width="80" height="60" fill="#007bff"/>
+  <rect x="50" y="130" width="280" height="40" fill="#007bff"/>
+  <text x="200" y="190" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">E-Commerce Platform</text>
+</svg> 

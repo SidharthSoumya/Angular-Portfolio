@@ -1,0 +1,30 @@
+<section class="experience-section">
+  <div class="container">
+    <h2 class="section-title">Professional Experience</h2>
+    
+    <div class="timeline">
+      <div class="timeline-item" *ngFor="let job of experiences">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">
+            <span class="date">{{ job.startDate }} - {{ job.endDate }}</span>
+            <span class="location">{{ job.location }}</span>
+          </div>
+          <h3 class="job-title">{{ job.title }}</h3>
+          <h4 class="company-name">{{ job.company }}</h4>
+          <p class="job-description">{{ job.description }}</p>
+          <ul class="responsibilities">
+            <li *ngFor="let responsibility of job.responsibilities">{{ responsibility }}</li>
+          </ul>
+          <div class="tech-stack">
+            <mat-chip-listbox>
+              <mat-chip *ngFor="let tech of job.technologies" color="primary" selected>
+                {{ tech }}
+              </mat-chip>
+            </mat-chip-listbox>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

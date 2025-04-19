@@ -1,1 +1,307 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+/* Material Icons */
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+:root {
+  --primary-color: #5e35b1;
+  --primary-light: #9162e4;
+  --primary-dark: #280a6e;
+  --secondary-color: #ff6f00;
+  --secondary-light: #ffa040;
+  --secondary-dark: #c43e00;
+  --accent-color: #00b0ff;
+  --accent-light: #69e2ff;
+  --accent-dark: #0081cb;
+  --background-color: #f8f9fa;
+  --surface-color: #ffffff;
+  --card-color: #ffffff;
+  --text-primary: #212121;
+  --text-secondary: #424242;
+  --text-light: #616161;
+  --text-on-primary: #ffffff;
+  --text-on-secondary: #ffffff;
+  --success-color: #00c853;
+  --warning-color: #ffd600;
+  --error-color: #d50000;
+  --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  --gradient-secondary: linear-gradient(135deg, var(--secondary-color) 0%, var(--secondary-light) 100%);
+  --gradient-accent: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+  --gradient-background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 16px;
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+}
+
+.mat-mdc-standard-chip {
+  --mdc-chip-label-text-color: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background-color: var(--gradient-background);
+  overflow-x: hidden;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+      radial-gradient(circle at 10% 20%, rgba(94, 53, 177, 0.05) 0%, transparent 20%),
+      radial-gradient(circle at 90% 80%, rgba(255, 111, 0, 0.05) 0%, transparent 20%),
+      radial-gradient(circle at 50% 50%, rgba(0, 176, 255, 0.05) 0%, transparent 30%);
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 5rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--primary-dark);
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+  }
+}
+
+/* Card styles */
+.card {
+  background-color: var(--card-color);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  overflow: hidden;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+  }
+}
+
+/* Button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--border-radius-md);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: var(--gradient-primary);
+  color: var(--text-on-primary);
+  box-shadow: var(--shadow-sm);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  &:focus {
+    outline: 3px solid var(--primary-light);
+    outline-offset: 2px;
+  }
+
+  mat-icon {
+    margin-right: 8px;
+  }
+}
+
+/* Animation classes */
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+.slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.scale-in {
+  animation: scaleIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .section {
+    padding: 3rem 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--gradient-primary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-dark);
+}
+
+/* Focus styles for accessibility */
+:focus {
+  outline: 3px solid var(--primary-light);
+  outline-offset: 2px;
+}
+
+/* Skip to main content link for accessibility */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  z-index: 999;
+  padding: 1em;
+  background-color: var(--primary-color);
+  color: var(--text-on-primary);
+  opacity: 0;
+
+  &:focus {
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}

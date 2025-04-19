@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+  <rect width="400" height="200" fill="#f0f0f0"/>
+  <circle cx="200" cy="100" r="50" fill="#17a2b8"/>
+  <circle cx="200" cy="100" r="40" fill="#17a2b8"/>
+  <circle cx="200" cy="100" r="30" fill="#17a2b8"/>
+  <path d="M200 50 L200 150 M150 100 L250 100" stroke="white" stroke-width="8"/>
+  <text x="200" y="180" font-family="Arial" font-size="14" text-anchor="middle" fill="#333">Weather App</text>
+</svg> 

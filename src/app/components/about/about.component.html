@@ -1,0 +1,46 @@
+<section class="about-section">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about-content">
+      <div class="bio-card">
+        <mat-card>
+          <mat-card-content>
+            <div class="profile-image">
+              <img src="assets/images/profile.jpeg" alt="Profile">
+            </div>
+            <h3>Angular Developer</h3>
+            <p class="bio-text">
+              I'm a passionate Angular developer with 6+ years of experience building modern web applications.
+              I specialize in creating responsive, scalable, and maintainable solutions using the latest Angular
+              features and best practices.
+            </p>
+            <p class="bio-text">
+              My approach combines technical expertise with a strong focus on user experience and performance
+              optimization.
+              I'm constantly learning and adapting to new technologies to deliver cutting-edge solutions.
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="skills-section">
+        <h3>Technical Skills</h3>
+        <div class="skills-grid">
+          <div class="skill-category" *ngFor="let category of skillCategories">
+            <h4>{{ category.name }}</h4>
+            <div class="skill-items">
+              <div class="skill-item" *ngFor="let skill of category.skills">
+                <mat-icon>{{ skill.icon }}</mat-icon>
+                <span>{{ skill.name }}</span>
+                <div class="skill-level">
+                  <div class="skill-bar" [style.width.%]="skill.level"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
