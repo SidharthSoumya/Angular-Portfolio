@@ -19,7 +19,7 @@
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 12px;
     position: relative;
     z-index: 1;
   }
@@ -57,7 +57,7 @@
       content: '';
       position: absolute;
       top: 0;
-      left: 50%;
+      left: 30%;
       transform: translateX(-50%);
       width: 3px;
       height: 100%;
@@ -96,7 +96,7 @@
   .timeline-dot {
     position: absolute;
     top: 0;
-    left: 50%;
+    left: 30%;
     transform: translateX(-50%);
     width: 24px;
     height: 24px;
@@ -120,7 +120,7 @@
   }
 
   .timeline-content {
-    width: 45%;
+    width: 65%;
     padding: 1.5rem;
     background-color: white;
     border-radius: var(--border-radius-lg);
@@ -136,11 +136,11 @@
     }
 
     &:nth-child(odd) {
-      margin-right: 55%;
+      margin-right: 35%;
     }
 
     &:nth-child(even) {
-      margin-left: 55%;
+      margin-left: 35%;
     }
   }
 
@@ -279,7 +279,7 @@
       width: calc(100% - 40px);
       margin-left: 40px !important;
       margin-right: 0 !important;
-      padding: 1.25rem;
+      padding: 1rem;
     }
 
     .job-title {

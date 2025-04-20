@@ -12,52 +12,68 @@ import { MatChipsModule } from '@angular/material/chips';
 export class ExperienceComponent {
 	experiences = [
 		{
-			title: 'Senior Angular Developer',
-			company: 'TechCorp Solutions',
-			location: 'Bangalore, India',
-			startDate: 'Jan 2021',
+			title: 'Senior Software Engineer',
+			company: 'Tyler Technologies',
+			location: 'Ahmedabad, IN',
+			startDate: 'Sep 2022',
 			endDate: 'Present',
-			description: 'Leading the frontend development team in building enterprise-level applications using Angular and related technologies.',
+			description: 'Lead the development of a large-scale web application using Angular, focusing on performance and scalability.',
 			responsibilities: [
-				'Architected and implemented a scalable micro-frontend architecture using Angular modules and lazy loading',
-				'Developed reusable component libraries that reduced development time by 40% across multiple projects',
-				'Mentored junior developers and conducted code reviews to maintain high code quality standards',
-				'Implemented state management solutions using NgRx for complex application state',
-				'Optimized application performance resulting in a 60% reduction in load times'
+				'Architected PWA with offline capabilities for the application using Angular and Service Workers',
+				'Designed and implemented reusable components and services to improve code maintainability',
+				'Integrated RESTful APIs and third-party libraries to enhance application functionality',
+				'Conducted code reviews and provided mentorship to junior developers',
+				'Followed Agile methodologies to manage project timelines and deliverables',
+				'Collaborated with UX/UI designers to create a user-friendly interface',
+				'Participated in sprint planning and retrospectives to continuously improve team processes',
+				'Worked closely with the DevOps team to implement CI/CD pipelines for automated testing and deployment',
 			],
-			technologies: ['Angular', 'TypeScript', 'NgRx', 'RxJS', 'SCSS', 'Jest', 'Cypress']
+			technologies: ['Angular', 'TypeScript', 'Node.js', 'HTML5', 'CSS3', 'SCSS', 'Angular Material', 'Bootstrap', 'RxJS', 'RESTful APIs', 'Service Workers', 'Git', 'Jenkins']
 		},
 		{
 			title: 'Angular Developer',
-			company: 'WebTech Innovations',
-			location: 'Hyderabad, India',
-			startDate: 'Mar 2019',
-			endDate: 'Dec 2020',
-			description: 'Worked on multiple client projects, focusing on responsive design and performance optimization.',
+			company: 'Cipio India Private Limited',
+			location: 'Ahmedabad, IN',
+			startDate: 'July 2021',
+			endDate: 'Sep 2022',
+			description: 'Developed & designed the web product using Angular, focusing on performance and scalability best user experience.',
 			responsibilities: [
-				'Built responsive web applications using Angular and Angular Material',
-				'Integrated RESTful APIs and implemented authentication using JWT',
-				'Developed interactive data visualizations using D3.js and Chart.js',
-				'Implemented unit and end-to-end tests using Jasmine and Protractor',
-				'Collaborated with UX designers to implement pixel-perfect designs'
+				'Developed a responsive web application using Angular and Bootstrap',
+				'Created reusable components and services to improve code maintainability',
+				'Integrated social media APIs like Facebook & Instagram for user authentication and data retrieval',
+				'Used socket.io for real-time data updates and notifications',
+				'chart.js was used for data visualization and analytics',
 			],
-			technologies: ['Angular', 'TypeScript', 'Angular Material', 'D3.js', 'Chart.js', 'Jasmine', 'Protractor']
+			technologies: ['Angular', 'TypeScript', 'HTML5', 'CSS3', 'SCSS', 'Bootstrap', 'chart.js', 'socket.io']
 		},
 		{
-			title: 'Frontend Developer',
-			company: 'Digital Solutions Inc.',
-			location: 'Mumbai, India',
-			startDate: 'Jun 2018',
-			endDate: 'Feb 2019',
-			description: 'Started as a junior developer and quickly progressed to handling more complex features and components.',
+			title: 'Angular Developer',
+			company: 'Silicon Techlab Private Limited',
+			location: 'Bhubaneswar, IN',
+			startDate: 'Dec 2018',
+			endDate: 'Apr 2021',
+			description: 'Worked on multiple client projects, focusing on responsive design and performance optimization.',
 			responsibilities: [
-				'Developed and maintained multiple Angular applications for various clients',
-				'Implemented responsive designs using CSS frameworks and custom SCSS',
-				'Worked with RESTful APIs and handled data transformation',
-				'Participated in daily stand-ups and sprint planning meetings',
-				'Fixed bugs and implemented feature requests based on client feedback'
+				'Built responsive web applications using Angular and Bootstrap',
+				'Integrated RESTful APIs and third-party libraries to enhance application functionality',
+				'Collaborated with UX designers to implement pixel-perfect designs',
+				'Participated in Agile ceremonies and contributed to sprint planning and retrospectives',
 			],
-			technologies: ['Angular', 'JavaScript', 'HTML5', 'CSS3', 'SCSS', 'Bootstrap', 'RESTful APIs']
+			technologies: ['Angular', 'TypeScript', 'HTML5', 'CSS3', 'SCSS', 'Bootstrap']
+		},
+		{
+			title: 'System Engineer Trainee',
+			company: 'Infosys Limited',
+			location: 'Mysore, IN',
+			startDate: 'Feb 2018',
+			endDate: 'July 2018',
+			description: 'Trained in various industry-standard technologies and frameworks, focusing on Frontend Web development.',
+			responsibilities: [
+				'Completed a rigorous training program on Angular, JavaScript, and web development best practices',
+				'Worked on a team project to develop a web application using Angular and Bootstrap',
+				'Learned about python language and its applications in industry',
+			],
+			technologies: ['Python', 'Angular', 'JavaScript', 'HTML5', 'CSS3', 'SCSS', 'Bootstrap']
 		}
 	];
 }
