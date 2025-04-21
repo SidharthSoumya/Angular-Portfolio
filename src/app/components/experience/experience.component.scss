@@ -57,7 +57,7 @@
       content: '';
       position: absolute;
       top: 0;
-      left: 30%;
+      left: 10%;
       transform: translateX(-50%);
       width: 3px;
       height: 100%;
@@ -96,7 +96,7 @@
   .timeline-dot {
     position: absolute;
     top: 0;
-    left: 30%;
+    left: 10%;
     transform: translateX(-50%);
     width: 24px;
     height: 24px;
@@ -120,7 +120,7 @@
   }
 
   .timeline-content {
-    width: 65%;
+    width: 85%;
     padding: 1.5rem;
     background-color: white;
     border-radius: var(--border-radius-lg);
@@ -136,11 +136,11 @@
     }
 
     &:nth-child(odd) {
-      margin-right: 35%;
+      margin-right: 10%;
     }
 
     &:nth-child(even) {
-      margin-left: 35%;
+      margin-left: 10%;
     }
   }
 
@@ -156,6 +156,7 @@
 
     .date {
       background: var(--gradient-primary);
+      background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       font-weight: 600;
