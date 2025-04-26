@@ -31,7 +31,7 @@ export class ContactComponent {
 	contactForm: FormGroup;
 	isSubmitting = false;
 
-	serviceId = 'service_siv4cpu'; // Replace with your Service ID
+	serviceId = 'service_b71l4er'; // Replace with your Service ID
 	templateId = 'template_wblyx6d'; // Replace with your Template ID
 	publicKey = 'Y9ivSTKoXFWtgm1an';
 

@@ -40,6 +40,15 @@ export class ProjectsComponent {
       demoUrl: 'https://jssidharth.netlify.app/home',
       isPrivate: false,
       githubUrl: 'https://github.com/SidharthSoumya/Angular-Portfolio'
+    },
+    {
+      title: 'Tenzies Game',
+      description: 'In this engaging dice game, players repeatedly roll their set of dice, strategically choosing which to re-roll. The ultimate goal is to achieve a uniform result where every die displays the same number. The first player to reach this matching state emerges as the winner, blending luck and tactical decisions in each turn.',
+      image: 'assets/images/projects/ecommerce.jpg',
+      technologies: ['React', 'CSS', 'React-DOM', 'Vite'],
+      demoUrl: 'https://react-game-tenzies.netlify.app',
+      isPrivate: false,
+      githubUrl: 'https://github.com/SidharthSoumya/tenzies-game'
     }
   ];
 }
