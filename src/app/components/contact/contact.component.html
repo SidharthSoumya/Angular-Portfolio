@@ -1,14 +1,14 @@
 <section class="contact-section">
   <div class="container">
     <h2 class="section-title">Get In Touch</h2>
-    
+
     <div class="contact-content">
       <div class="contact-info">
         <mat-card>
           <mat-card-content>
             <h3>Contact Information</h3>
             <p>Feel free to reach out to me for any inquiries or opportunities.</p>
-            
+
             <div class="info-item">
               <mat-icon>person</mat-icon>
               <div>
@@ -16,7 +16,7 @@
                 <p>J Soumya Sidharth</p>
               </div>
             </div>
-            
+
             <div class="info-item">
               <mat-icon>email</mat-icon>
               <div>
@@ -24,7 +24,7 @@
                 <a href="mailto:sidharthsoumya&#64;gmail.com">sidharthsoumya&#64;gmail.com</a>
               </div>
             </div>
-            
+
             <div class="info-item">
               <mat-icon>phone</mat-icon>
               <div>
@@ -32,7 +32,7 @@
                 <a href="tel:+917205353583">+91 (720) 535-3583</a>
               </div>
             </div>
-            
+
             <div class="info-item">
               <mat-icon>location_on</mat-icon>
               <div>
@@ -40,7 +40,7 @@
                 <p>Bhubaneswar, Odisha, India</p>
               </div>
             </div>
-            
+
             <div class="social-links">
               <a href="https://github.com/sidharthsoumya" target="_blank" class="social-link">
                 <mat-icon>code</mat-icon>
@@ -54,47 +54,37 @@
           </mat-card-content>
         </mat-card>
       </div>
-      
+
       <div class="contact-form">
         <mat-card>
           <mat-card-content>
             <h3>Send Me a Message</h3>
-            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+            <form [formGroup]="contactForm" (ngSubmit)="onSubmit($event)">
               <mat-form-field appearance="outline">
                 <mat-label>Name</mat-label>
-                <input matInput formControlName="name" placeholder="Your name">
-                <mat-error *ngIf="contactForm.get('name')?.hasError('required')">
-                  Name is required
-                </mat-error>
+                <input matInput formControlName="name" name="name" placeholder="Your name">
               </mat-form-field>
-              
+
               <mat-form-field appearance="outline">
                 <mat-label>Email</mat-label>
-                <input matInput formControlName="email" placeholder="Your email" type="email">
-                <mat-error *ngIf="contactForm.get('email')?.hasError('required')">
-                  Email is required
-                </mat-error>
-                <mat-error *ngIf="contactForm.get('email')?.hasError('email')">
-                  Please enter a valid email
-                </mat-error>
+                <input matInput formControlName="email" name="email" placeholder="Your email" type="email">
               </mat-form-field>
-              
+              <mat-form-field appearance="outline">
+                <mat-label>Mobile</mat-label>
+                <input matInput formControlName="mobile" name="mobile" placeholder="Your mobile no" type="number" maxlength="10">
+              </mat-form-field>
+
               <mat-form-field appearance="outline">
                 <mat-label>Subject</mat-label>
-                <input matInput formControlName="subject" placeholder="Message subject">
-                <mat-error *ngIf="contactForm.get('subject')?.hasError('required')">
-                  Subject is required
-                </mat-error>
+                <input matInput formControlName="subject" name="subject" placeholder="Message subject">
               </mat-form-field>
-              
+
               <mat-form-field appearance="outline">
                 <mat-label>Message</mat-label>
-                <textarea matInput formControlName="message" placeholder="Your message" rows="4"></textarea>
-                <mat-error *ngIf="contactForm.get('message')?.hasError('required')">
-                  Message is required
-                </mat-error>
+                <textarea matInput formControlName="message" name="message" placeholder="Your message"
+                  rows="4"></textarea>
               </mat-form-field>
-              
+
               <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid || isSubmitting">
                 <mat-icon>send</mat-icon>
                 Send Message

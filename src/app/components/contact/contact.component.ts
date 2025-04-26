@@ -7,6 +7,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import emailjs, { type EmailJSResponseStatus } from '@emailjs/browser';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-contact',
@@ -29,31 +31,41 @@ export class ContactComponent {
 	contactForm: FormGroup;
 	isSubmitting = false;
 
-	constructor(private fb: FormBuilder, private snackBar: MatSnackBar) {
+	serviceId = 'service_siv4cpu'; // Replace with your Service ID
+	templateId = 'template_wblyx6d'; // Replace with your Template ID
+	publicKey = 'Y9ivSTKoXFWtgm1an';
+
+	constructor(private fb: FormBuilder, private snackBar: MatSnackBar, private router: Router) {
 		this.contactForm = this.fb.group({
 			name: ['', Validators.required],
 			email: ['', [Validators.required, Validators.email]],
+			mobile: ['', [Validators.required]],
 			subject: ['', Validators.required],
 			message: ['', Validators.required]
 		});
 	}
 
-	onSubmit() {
+	async onSubmit(event: Event): Promise<void> {
 		if (this.contactForm.valid) {
 			this.isSubmitting = true;
-			// Here you would typically send the form data to your backend
-			console.log(this.contactForm.value);
 
-			// Simulate API call
-			setTimeout(() => {
+			try {
 				this.isSubmitting = false;
+				const response = await emailjs.sendForm(
+					this.serviceId,
+					this.templateId,
+					event.target as HTMLFormElement,
+					{ publicKey: this.publicKey }
+				);
 				this.snackBar.open('Message sent successfully!', 'Close', {
 					duration: 3000,
 					horizontalPosition: 'end',
 					verticalPosition: 'top'
 				});
-				this.contactForm.reset();
-			}, 1000);
+				this.router.navigate(['/home']);
+			} catch (error) {
+				console.error('Error sending email:', error);
+			}
 		}
 	}
 }
