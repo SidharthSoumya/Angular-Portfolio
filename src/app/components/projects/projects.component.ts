@@ -15,36 +15,31 @@ import { MatChipsModule } from '@angular/material/chips';
 export class ProjectsComponent {
   projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-featured e-commerce platform with product catalog, shopping cart, and payment integration.',
+      title: 'Arinspect',
+      description: 'Acquired by Tyler last November, ARInspect is an AI-powered augmented reality platform that streamlines field inspections and compliance for government agencies by digitizing processes, automating workflows, and providing real-time data insights to improve efficiency and safety.',
       image: 'assets/images/projects/ecommerce.jpg',
-      technologies: ['Angular', 'NgRx', 'Firebase', 'Stripe'],
-      demoUrl: 'https://ecommerce-demo.com',
-      githubUrl: 'https://github.com/username/ecommerce'
+      technologies: ['Angular', 'Node', 'Angular Material', 'Mixpanel'],
+      demoUrl: 'https://qa.fieldops.tylerapp.com/',
+      isPrivate: true,
+      githubUrl: ''
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates and team features.',
+      title: 'Cipio.ai',
+      description: 'CIPIO.ai is an AI-powered video marketing platform that enables brands to efficiently source, create, and manage authentic user-generated content (UGC) videos for various marketing channels, improving performance and ROI.',
       image: 'assets/images/projects/taskmanager.jpg',
-      technologies: ['Angular', 'RxJS', 'Socket.io', 'MongoDB'],
-      demoUrl: 'https://taskmanager-demo.com',
-      githubUrl: 'https://github.com/username/taskmanager'
+      technologies: ['Angular', 'Chart.js', 'Socket.io', 'Python', 'Mixpanel'],
+      demoUrl: 'https://cim.cipio.ai/',
+      isPrivate: true,
+      githubUrl: ''
     },
     {
       title: 'Portfolio Website',
-      description: 'A responsive portfolio website showcasing projects and skills with modern design.',
+      description: 'Explore the portfolio of a proficient Angular developer with over 6 years of experience, featuring a range of projects and easy contact options, all presented on a mobile-friendly website',
       image: 'assets/images/projects/portfolio.jpg',
-      technologies: ['Angular', 'SCSS', 'GSAP', 'Three.js'],
-      demoUrl: 'https://portfolio-demo.com',
-      githubUrl: 'https://github.com/username/portfolio'
-    },
-    {
-      title: 'Weather Dashboard',
-      description: 'A weather dashboard with location-based forecasts and interactive charts.',
-      image: 'assets/images/projects/weather.jpg',
-      technologies: ['Angular', 'D3.js', 'OpenWeather API', 'Chart.js'],
-      demoUrl: 'https://weather-demo.com',
-      githubUrl: 'https://github.com/username/weather'
+      technologies: ['Angular', 'SCSS', 'Angular Material', 'Cursor.ai'],
+      demoUrl: 'https://jssidharth.netlify.app/home',
+      isPrivate: false,
+      githubUrl: 'https://github.com/SidharthSoumya/Angular-Portfolio'
     }
   ];
 }
