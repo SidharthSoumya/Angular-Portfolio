@@ -165,7 +165,7 @@ body {
   }
 
   &:focus {
-    outline: 3px solid var(--primary-light);
+    // outline: 3px solid var(--primary-light);
     outline-offset: 2px;
   }
 
@@ -285,7 +285,7 @@ body {
 
 /* Focus styles for accessibility */
 :focus {
-  outline: 3px solid var(--primary-light);
+  // outline: 3px solid var(--primary-light);
   outline-offset: 2px;
 }
 

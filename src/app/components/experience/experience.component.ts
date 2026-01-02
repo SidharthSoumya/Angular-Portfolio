@@ -13,7 +13,7 @@ export class ExperienceComponent {
 	experiences = [
 		{
 			title: 'Senior Software Engineer',
-			company: 'Tyler Technologies',
+			company: 'Tyler Technologies (ARInspect)',
 			location: 'Ahmedabad, IN',
 			startDate: 'Sep 2022',
 			endDate: 'Present',
