@@ -18,8 +18,8 @@ export class FooterComponent {
   currentYear = new Date().getFullYear();
   
   socialLinks = [
-    { icon: 'code', url: 'https://github.com', label: 'GitHub' },
-    { icon: 'link', url: 'https://linkedin.com', label: 'LinkedIn' },
+    { icon: 'graph_8', url: 'https://github.com/SidharthSoumya?tab=repositories', label: 'GitHub' },
+    { icon: 'link', url: 'https://www.linkedin.com/in/j-soumya-sidharth-88645a7a/', label: 'LinkedIn' },
     { icon: 'mail', url: 'mailto:sidharthsoumya@gmail.com', label: 'Email' }
   ];
 } 

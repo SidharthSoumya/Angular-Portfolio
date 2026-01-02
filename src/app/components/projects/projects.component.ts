@@ -37,7 +37,7 @@ export class ProjectsComponent {
       description: 'Explore the portfolio of a proficient Angular developer with over 6 years of experience, featuring a range of projects and easy contact options, all presented on a mobile-friendly website',
       image: 'assets/images/projects/portfolio.jpg',
       technologies: ['Angular', 'SCSS', 'Angular Material', 'Cursor.ai'],
-      demoUrl: 'https://jssidharth.netlify.app/home',
+      demoUrl: 'https://jssidharth.netlify.app',
       isPrivate: false,
       githubUrl: 'https://github.com/SidharthSoumya/Angular-Portfolio'
     },
@@ -49,6 +49,15 @@ export class ProjectsComponent {
       demoUrl: 'https://react-game-tenzies.netlify.app',
       isPrivate: false,
       githubUrl: 'https://github.com/SidharthSoumya/tenzies-game'
+    },
+    {
+      title: 'MyMedBuddy',
+      description: 'MyMedBuddy is an innovative, patient-focused healthcare startup based in Bhubaneswar, dedicated to simplifying the often confusing and stressful experience of hospital visits, which acts as the trusted Personalized Health Companion for the patients, providing comprehensive logistical support, administrative help, and crucial emotional reassurance.',
+      image: 'assets/images/projects/ecommerce.jpg',
+      technologies: ['Angular', 'CSS', 'Angular Material', 'AWS S3'],
+      demoUrl: 'https://mymedbuddy.in',
+      isPrivate: true,
+      githubUrl: 'https://github.com/SidharthSoumya/my-med-buddy'
     }
   ];
 }

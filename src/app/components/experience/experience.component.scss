@@ -33,7 +33,7 @@
     display: inline-block;
     left: 50%;
     transform: translateX(-50%);
-    
+
     &::after {
       content: '';
       position: absolute;
@@ -87,6 +87,7 @@
       opacity: 0;
       transform: translateY(20px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -164,7 +165,7 @@
       font-size: 0.95rem;
       position: relative;
       padding-right: 1rem;
-      
+
       &::after {
         content: '';
         position: absolute;
@@ -186,14 +187,11 @@
       font-size: 0.9rem;
       overflow: hidden;
       text-overflow: ellipsis;
-      
-      &::before {
-        content: 'location_on';
-        font-family: 'Material Icons';
-        margin-right: 5px;
-        font-size: 16px;
+
+      .location-icon {
+        font-size: 18px;
         color: var(--secondary-color);
-        flex-shrink: 0;
+        align-content: center;
       }
     }
   }
@@ -227,14 +225,13 @@
       line-height: 1.4;
       color: var(--text-color);
       position: relative;
-      
-      &::before {
-        content: 'arrow_right';
-        font-family: 'Material Icons';
+      list-style-type: none;
+
+      .arrow {
         position: absolute;
         left: -1.25rem;
+        font-size: 1.25rem;
         color: var(--accent-color);
-        font-size: 14px;
       }
     }
   }
@@ -257,7 +254,7 @@
       transition: all 0.3s ease;
       font-size: 0.9rem;
       height: 24px;
-      
+
       &:hover {
         transform: translateY(-2px);
         box-shadow: 0 3px 8px rgba(98, 0, 234, 0.3);
@@ -304,11 +301,11 @@
       justify-content: flex-start;
       gap: 0.75rem;
       font-size: 0.85rem;
-      
+
       .date {
         font-size: 0.9rem;
       }
-      
+
       .location {
         font-size: 0.85rem;
       }

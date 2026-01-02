@@ -34,6 +34,16 @@ export class AboutComponent {
       ]
     },
     {
+      name: 'AI & Cloud Services',
+      skills: [
+        { name: 'AWS S3', icon: 'storage', level: 80 },
+        { name: 'AWS Cloudfront', icon: 'public', level: 60 },
+        { name: 'AWS Lambda', icon: 'bolt', level: 70 },
+        { name: 'MCP Server', icon: 'dns', level: 60 },
+        { name: 'N8N Worlflows', icon: 'flowcharts', level: 70 },
+      ]
+    },
+    {
       name: 'Testing & Quality',
       skills: [
         { name: 'Jasmine', icon: 'science', level: 85 },

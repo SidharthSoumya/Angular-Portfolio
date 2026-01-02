@@ -1,20 +1,23 @@
 <section class="experience-section">
   <div class="container">
     <h2 class="section-title">Professional Experience</h2>
-    
+
     <div class="timeline">
       <div class="timeline-item" *ngFor="let job of experiences">
         <div class="timeline-dot"></div>
         <div class="timeline-content">
           <div class="timeline-date">
             <span class="date">{{ job.startDate }} - {{ job.endDate }}</span>
-            <span class="location">{{ job.location }}</span>
+            <span class="location"> <mat-icon fontSet="material-symbols-outlined"
+                class="filled location-icon">location_on</mat-icon>
+              {{ job.location
+              }}</span>
           </div>
           <h3 class="job-title">{{ job.title }}</h3>
           <h4 class="company-name">{{ job.company }}</h4>
           <p class="job-description">{{ job.description }}</p>
           <ul class="responsibilities">
-            <li *ngFor="let responsibility of job.responsibilities">{{ responsibility }}</li>
+            <li *ngFor="let responsibility of job.responsibilities"> <mat-icon fontSet="material-symbols-outlined" class="arrow">arrow_right</mat-icon> {{ responsibility }}</li>
           </ul>
           <div class="tech-stack">
             <mat-chip-listbox>

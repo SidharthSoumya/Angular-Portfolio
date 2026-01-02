@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatChipsModule } from '@angular/material/chips';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
 	selector: 'app-experience',
 	standalone: true,
-	imports: [CommonModule, MatChipsModule],
+	imports: [CommonModule, MatChipsModule, MatIconModule],
 	templateUrl: './experience.component.html',
 	styleUrl: './experience.component.scss'
 })

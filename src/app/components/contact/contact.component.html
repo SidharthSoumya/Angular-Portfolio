@@ -10,7 +10,7 @@
             <p>Feel free to reach out to me for any inquiries or opportunities.</p>
 
             <div class="info-item">
-              <mat-icon>person</mat-icon>
+              <mat-icon fontSet="material-symbols-outlined" class="filled">person</mat-icon>
               <div>
                 <h4>Name</h4>
                 <p>J Soumya Sidharth</p>
@@ -18,7 +18,7 @@
             </div>
 
             <div class="info-item">
-              <mat-icon>email</mat-icon>
+              <mat-icon fontSet="material-symbols-outlined" class="filled">email</mat-icon>
               <div>
                 <h4>Email</h4>
                 <a href="mailto:sidharthsoumya&#64;gmail.com">sidharthsoumya&#64;gmail.com</a>
@@ -26,7 +26,7 @@
             </div>
 
             <div class="info-item">
-              <mat-icon>phone</mat-icon>
+              <mat-icon fontSet="material-symbols-outlined" class="filled">phone</mat-icon>
               <div>
                 <h4>Phone</h4>
                 <a href="tel:+917205353583">+91 (720) 535-3583</a>
@@ -34,7 +34,7 @@
             </div>
 
             <div class="info-item">
-              <mat-icon>location_on</mat-icon>
+              <mat-icon fontSet="material-symbols-outlined" class="filled">location_on</mat-icon>
               <div>
                 <h4>Location</h4>
                 <p>Bhubaneswar, Odisha, India</p>
@@ -43,11 +43,11 @@
 
             <div class="social-links">
               <a href="https://github.com/sidharthsoumya" target="_blank" class="social-link">
-                <mat-icon>code</mat-icon>
+                <mat-icon fontSet="material-symbols-outlined">code</mat-icon>
                 <span>GitHub</span>
               </a>
               <a href="https://www.linkedin.com/in/j-soumya-sidharth-88645a7a/" target="_blank" class="social-link">
-                <mat-icon>business</mat-icon>
+                <mat-icon fontSet="material-symbols-outlined">link</mat-icon>
                 <span>LinkedIn</span>
               </a>
             </div>
@@ -71,7 +71,8 @@
               </mat-form-field>
               <mat-form-field appearance="outline">
                 <mat-label>Mobile</mat-label>
-                <input matInput formControlName="mobile" name="mobile" placeholder="Your mobile no" type="number" maxlength="10">
+                <input matInput formControlName="mobile" name="mobile" placeholder="Your mobile no" type="number"
+                  maxlength="10">
               </mat-form-field>
 
               <mat-form-field appearance="outline">
@@ -86,7 +87,7 @@
               </mat-form-field>
 
               <button mat-raised-button color="primary" type="submit" [disabled]="contactForm.invalid || isSubmitting">
-                <mat-icon>send</mat-icon>
+                <mat-icon fontSet="material-symbols-outlined">send</mat-icon>
                 Send Message
               </button>
             </form>
