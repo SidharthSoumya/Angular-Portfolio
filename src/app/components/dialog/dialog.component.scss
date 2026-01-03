@@ -1,0 +1,35 @@
+.dialog-header {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+
+    h1 {
+        margin-bottom: 0;
+    }
+}
+
+.dialog-content {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100vh;
+    /* keep dialog within viewport */
+    overflow-y: hidden;
+    /* prevent vertical scrolling inside content */
+    border-top: 8px solid var(--primary-color);
+    // border-radius: 15px;
+}
+
+.image-full {
+    max-width: 100%;
+    max-height: calc(100vh - 80px);
+    /* leave room for any dialog chrome; adjust 64px if needed */
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    /* preserve aspect ratio without cropping */
+    background: #fff;
+    display: block;
+}

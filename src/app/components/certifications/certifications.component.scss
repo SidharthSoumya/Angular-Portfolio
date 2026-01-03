@@ -1,0 +1,276 @@
+.certifications-section {
+    padding: 3.5rem 0;
+    background: var(--page-bg, #f6f7fb);
+
+    .container {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 1.25rem;
+        position: relative;
+    }
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: var(--primary-color, #2b2f42);
+        font-size: 2rem;
+    }
+
+    .timeline {
+        position: relative;
+        padding: 1rem 0 3rem;
+    }
+
+    /* center vertical line */
+    .timeline-line {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        width: 4px;
+        height: 100%;
+        background: #e2e8f0;
+        border-radius: 2px;
+        z-index: 1;
+    }
+
+    .timeline-item {
+        position: relative;
+        width: 50%;
+        padding: 1rem 0;
+        box-sizing: border-box;
+        z-index: 2;
+
+        .timeline-dot {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 50%;
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #1e88e5;
+            box-shadow: 0 0 0 6px rgba(30, 136, 229, 0.08);
+            z-index: 3;
+        }
+
+        .item-inner {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            width: 100%;
+        }
+
+        @each $side in (left, right) {
+            &.#{$side} {
+                @if $side ==left {
+                    left: 0;
+                    justify-content: flex-end;
+                }
+
+                @else {
+                    left: 50%;
+                }
+
+                .timeline-dot {
+                    @if $side ==left {
+                        position: absolute;
+                        left: 100%;
+                    }
+
+                    @if $side ==right {
+                        left: 0;
+                    }
+                }
+
+                .item-inner {
+                    @if $side ==left {
+                        flex-direction: row;
+                    }
+
+                    @else {
+                        flex-direction: row-reverse;
+                    }
+
+                    align-items: center;
+                }
+
+                .cert-card {
+                    width: 720px;
+
+                    @if $side ==left {
+                        margin-left: 24px;
+                    }
+
+                    @else {
+                        margin-right: 24px;
+                    }
+
+                    text-align: left;
+                }
+
+                .date-box {
+                    @if $side ==left {
+                        margin-right: 24px;
+                    }
+
+                    @else {
+                        margin-left: 24px;
+                    }
+                }
+            }
+        }
+
+
+
+        .cert-card {
+            width: calc(100% - 120px);
+            max-width: 520px;
+            min-width: 260px;
+            box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+            border-radius: 8px;
+            transition: transform .18s ease, box-shadow .18s ease;
+        }
+
+        .date-box {
+            width: 96px;
+            min-width: 86px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            border-radius: 6px;
+            border: 1px solid rgba(15, 23, 42, 0.06);
+            padding: 8px;
+            box-shadow: 0 2px 6px rgba(16, 24, 40, 0.03);
+            text-align: center;
+            position: relative; // added to anchor arrows
+        }
+
+        .date-month {
+            font-size: 1rem;
+            color: #64748b;
+            text-transform: capitalize;
+        }
+
+        .date-day {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #0f172a;
+            line-height: 1;
+            margin: 2px 0;
+        }
+
+        .date-year {
+            font-size: 0.95rem;
+            color: #0f172a;
+            font-weight: 600;
+        }
+
+        .cert-avatar {
+            background: linear-gradient(135deg, #f0f7ff, #e6f0ff);
+            color: #0f172a;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cert-desc {
+            margin: 0.6rem 0;
+            color: #475569;
+        }
+
+        .cert-tags {
+            display: flex;
+            justify-content: flex-end;
+            gap: 6px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+
+            mat-chip {
+                background: var(--primary-color);
+                color: white;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                font-size: 0.9rem;
+                height: 24px;
+
+                &:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 3px 8px rgba(98, 0, 234, 0.3);
+                }
+
+                &.art {
+                    background-color: #f74f87;
+                }
+
+                &.aws {
+                    background-color: #f69403;
+                }
+
+                &.angular {
+                    background-color: #e4053b;
+                }
+
+                &.typescript {
+                    background-color: #3074bf;
+                }
+
+                &.javascript {
+                    background-color: #eed81d;
+                }
+
+                &.react {
+                    background-color: #04d1f5;
+                }
+
+                &.css {
+                    background-color: #c76395;
+                }
+            }
+        }
+    }
+}
+
+/* responsive: stack vertically and move the line to left */
+@media (max-width: 900px) {
+    .certifications-section {
+        .timeline-line {
+            display: none;
+        }
+
+        .timeline-item {
+            width: 100%;
+            left: 0 !important;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            margin-bottom: 1.25rem;
+
+            .timeline-dot {
+                display: none;
+            }
+
+            .item-inner {
+                flex-direction: row;
+            }
+
+            &.right {
+                .item-inner {
+                    gap: 0;
+                }
+            }
+
+            .cert-card {
+                width: 100%;
+                margin: 0 0 0 16px;
+            }
+
+            .date-box {
+                order: 0;
+                align-self: center;
+            }
+        }
+    }
+}

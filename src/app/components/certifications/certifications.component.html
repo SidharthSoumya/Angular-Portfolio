@@ -1,0 +1,62 @@
+<section class="certifications-section">
+    <div class="container">
+        <h2 class="section-title">Certifications</h2>
+
+        <div class="timeline">
+            <div class="timeline-line" aria-hidden="true"></div>
+
+            <div class="timeline-item" *ngFor="let cert of certificates; let i = index" [class.left]="i % 2 === 0"
+                [class.right]="i % 2 === 1">
+                <div class="timeline-dot" aria-hidden="true"></div>
+
+                <div class="item-inner">
+                    <!-- For left items: card then date-box on inner edge. For right items the order is reversed via CSS -->
+                    <mat-card class="cert-card" role="article">
+                        <mat-card-header>
+                            <div mat-card-avatar class="cert-avatar">
+                                <mat-icon fontSet="material-symbols-outlined">school</mat-icon>
+                            </div>
+                            <mat-card-title id="cert-title-{{i}}">{{ cert.title }}</mat-card-title>
+                            <mat-card-subtitle>{{ cert.issuer }}</mat-card-subtitle>
+                        </mat-card-header>
+
+                        <mat-card-content>
+                            <div class="cert-tags">
+                                <mat-chip-listbox>
+                                    <mat-chip *ngFor="let t of cert.tags" selected [ngClass]="
+                                        {
+                                            'art': t === 'Procreate' || t.toLowerCase().includes('art'), 
+                                            'css': t.toLowerCase().includes('css'),
+                                            'aws': t.toLowerCase().includes('aws'), 
+                                            'angular': t.toLowerCase().includes('angular'), 
+                                            'javascript': t.toLowerCase().includes('javascript'),
+                                            'react': t.toLowerCase().includes('react'),
+                                            'typescript': t.toLowerCase().includes('typescript') || t.toLowerCase().includes('python')
+                                            }">
+                                        {{ t }}</mat-chip>
+                                </mat-chip-listbox>
+                            </div>
+                        </mat-card-content>
+
+                        <mat-card-actions align="end">
+                            <a mat-stroked-button color="primary" (click)="viewCertificate(cert)" rel="noopener">
+                                <mat-icon fontSet="material-symbols-outlined">launch</mat-icon>
+                                View
+                            </a>
+                        </mat-card-actions>
+                    </mat-card>
+
+                    <div class="date-box" aria-hidden="true">
+                        <!-- attempt to split date into parts if possible, otherwise show full string -->
+                        <div class="date-month">{{ cert.date.split(' ')[0] }}
+                        </div>
+                        <div class="date-day">{{ cert.date.split(' ')[1] }}
+                        </div>
+                        <div class="date-year">{{ cert.date.split(' ')[2] }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ...existing code... -->
