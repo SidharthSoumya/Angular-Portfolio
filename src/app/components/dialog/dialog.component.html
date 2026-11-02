@@ -1,9 +1,12 @@
-<div class="dialog-header">
-    <h1 mat-dialog-title>{{ data?.title }}</h1>
-    <button mat-icon-button mat-dialog-close>
-        <mat-icon fontSet="material-symbols-outlined">close</mat-icon>
-    </button>
-</div>
-<mat-dialog-content class="dialog-content" role="document" aria-label="Image viewer">
-    <img [src]="safeImageUrl" [alt]="imageUrl || 'image preview'" class="image-full" />
+<mat-dialog-content class="fullscreen-dialog-content">
+    @if (isPdf) {
+    <object [data]="safeAssetUrl" type="application/pdf" class="preview-element pdf-viewer">
+        <div class="pdf-fallback">
+            <p>Unable to preview PDF directly.</p>
+            <a [href]="assetUrl" target="_blank" mat-flat-button color="primary">Download PDF</a>
+        </div>
+    </object>
+    } @else {
+    <img [src]="safeAssetUrl" [alt]="data?.title || 'Certificate preview'" class="preview-element image-preview" />
+    }
 </mat-dialog-content>

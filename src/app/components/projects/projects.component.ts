@@ -25,7 +25,7 @@ export interface Project {
 })
 export class ProjectsComponent {
   private http = inject(HttpClient);
-  private apiUrl = 'https://jn52z60nt3.execute-api.ap-south-1.amazonaws.com/Portfolio/projects';
+  private apiUrl = 'https://jn52z60nt3.execute-api.ap-south-1.amazonaws.com/portfolio/projects';
 
   projects: Project[] | any = []
 

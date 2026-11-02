@@ -1,35 +1,55 @@
-.dialog-header {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-
-    h1 {
-        margin-bottom: 0;
-    }
-}
-
-.dialog-content {
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    max-height: 100vh;
-    /* keep dialog within viewport */
-    overflow-y: hidden;
-    /* prevent vertical scrolling inside content */
-    border-top: 8px solid var(--primary-color);
-    // border-radius: 15px;
-}
-
-.image-full {
-    max-width: 100%;
-    max-height: calc(100vh - 80px);
-    /* leave room for any dialog chrome; adjust 64px if needed */
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    /* preserve aspect ratio without cropping */
-    background: #fff;
+:host {
     display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+// 1. Lock the dialog container dimensions cleanly and remove default padding
+::ng-deep .mat-mdc-dialog-container {
+    padding: 0 !important;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    width: auto !important;
+    max-width: 92vw !important;
+    background: #ffffff !important;
+}
+
+// 3. Force content area to contain the certificate without any scrollbars
+.fullscreen-dialog-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px; // Gives breathing room around the edges so buttons don't overlap
+    margin: 0 !important;
+    overflow: hidden !important; // Completely kills any scrollbars
+    max-height: calc(85vh + 20px);
+    background: #ffffff;
+
+    .preview-element {
+        display: block;
+        max-width: 90vw;
+        max-height: 95vh; // Ensures it never exceeds the screen height
+        width: auto;
+        height: auto;
+        object-fit: contain; // Guarantees landscape scaling with zero distortion
+        border-radius: 8px;
+    }
+
+    .pdf-viewer {
+        border: none;
+        width: 80vw;
+        height: 85vh;
+        max-height: 85vh;
+        max-width: 1050px;
+    }
+
+    .pdf-fallback {
+        color: #1e293b;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        align-items: center;
+        padding: 40px;
+    }
 }
